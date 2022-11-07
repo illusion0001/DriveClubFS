@@ -20,5 +20,15 @@ jobs:
 
     - name: Build
       run: |
-        dotnet build
+        mkdir bin
+        dotnet build --output "bin"
         ls -R
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: Binaries (exe+pdb)
+        path: |
+          bin\**\.exe
+          bin\**\.pdb
+          bin\**\.dll
