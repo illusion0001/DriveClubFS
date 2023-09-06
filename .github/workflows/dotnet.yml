@@ -20,7 +20,8 @@ jobs:
 
     - name: Build
       run: |
-        dotnet publish --self-contained true
+        dotnet publish -r win-x64 -p:PublishSingleFile=true --self-contained true
+        ls -R
         # dotnet build
 
     - name: Upload artifact
