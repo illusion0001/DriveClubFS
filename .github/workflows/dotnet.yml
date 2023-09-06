@@ -27,4 +27,6 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: DriveClubFS Binaries
-        path: bin
+        path: |
+          bin
+          DriveClubFS/bin
