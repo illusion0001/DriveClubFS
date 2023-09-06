@@ -21,15 +21,10 @@ jobs:
     - name: Build
       run: |
         dotnet publish -r win-x64 -p:PublishSingleFile=true --self-contained true -o bin
-        ls -R
-        # dotnet build
 
     - name: Upload artifact
-      if: false
+      if: true
       uses: actions/upload-artifact@v3
       with:
         name: DriveClubFS Binaries
-        path: |
-          bin\*.exe
-          bin\*.pdb
-          bin\*.dll
+        path: bin
