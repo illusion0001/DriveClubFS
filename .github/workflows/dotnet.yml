@@ -20,7 +20,7 @@ jobs:
 
     - name: Build
       run: |
-        dotnet publish -r win-x64 -p:PublishSingleFile=true --self-contained true
+        dotnet publish -r win-x64 -p:PublishSingleFile=true --self-contained true -o bin
         ls -R
         # dotnet build
 
